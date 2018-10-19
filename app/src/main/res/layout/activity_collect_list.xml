@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_collect_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.jsxl.selfexam.activity.CollectListActivity">
+    <include layout="@layout/title_bar"/>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_collect_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ffffff"
+        tc:tabIndicatorColor="#6397f7"
+        tc:tabSelectedTextColor="#6397f7"
+        tc:tabTextAppearance="@style/CustomTableTextAppearance"
+        tc:tabTextColor="#000000"></android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_collect_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+</LinearLayout>

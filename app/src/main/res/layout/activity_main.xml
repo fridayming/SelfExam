@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jsxl.selfexam.activity.HomePagerActivity">
+    <LinearLayout
+        android:id="@+id/ll_status_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        android:visibility="gone" />
+    <RadioGroup
+        android:id="@+id/rg_group"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/icon_home_state"
+            android:text="首页"
+            android:textColor="#ff8899" />
+
+        <RadioButton
+            android:id="@+id/rb_record"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/icon_record_state"
+            android:text="记录"
+            android:textColor="#333333" />
+
+        <RadioButton
+            android:id="@+id/rb_consultation"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/icon_consultation_state"
+            android:text="咨询"
+            android:textColor="#333333" />
+
+        <RadioButton
+            android:id="@+id/rb_my"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/icon_my_state"
+            android:text="我的"
+            android:textColor="#333333" />
+    </RadioGroup>
+    <View
+        android:id="@+id/line"
+        android:layout_above="@id/rg_group"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#aaaaaa"/>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line"
+        android:background="#ffffff"></FrameLayout>
+</RelativeLayout>

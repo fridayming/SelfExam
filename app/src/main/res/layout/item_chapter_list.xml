@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="15dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_unfinish" />
+    <TextView
+        android:id="@+id/tv_chapter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/iv_status"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:text="中国近代史"
+        android:textColor="#333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_chapter_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/tv_chapter_name"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/iv_status"
+        android:gravity="center"
+        android:text="15/30"
+        android:textColor="#333333"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/pb_chapter_progress"
+        style="@style/InitProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tv_chapter_progress"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="88dp"
+        android:layout_toRightOf="@id/iv_status"
+        android:max="100"
+        android:progress="0" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/iv_status"
+        />
+
+    <ImageView
+        android:id="@+id/iv_todo"
+        android:layout_marginRight="12dp"
+        android:layout_width="47.5dp"
+        android:layout_height="20.8dp"
+        android:src="@drawable/icon_redo"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp" />
+</RelativeLayout>

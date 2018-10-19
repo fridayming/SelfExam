@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_record_subject_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:textColor="#999999"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:text="语文"
+        android:src="@drawable/icon_record_bg"/>
+</LinearLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.jsxl.selfexam.activity.RegisterActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="48dp"
+                android:orientation="horizontal">
+
+                <com.jsxl.selfexam.widget.DrawableTextView
+                    style="@style/register_login_text_attribute"
+                    android:drawableLeft="@drawable/icon_phone"
+                    android:text="手  机  号："
+                    tc:drawableHeight="18dp"
+                    tc:drawableWidth="18dp" />
+
+                <EditText
+                    android:id="@+id/et_register_phone"
+                    style="@style/register_login_edittext_attribute"
+                    android:hint="请输入手机号（必填）"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="24dp"
+                android:background="#F0F0F0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+                <com.jsxl.selfexam.widget.DrawableTextView
+                    style="@style/register_login_text_attribute"
+                    android:drawableLeft="@drawable/icon_psw"
+                    android:text="密        码："
+                    tc:drawableHeight="18dp"
+                    tc:drawableWidth="18dp" />
+
+                <EditText
+                    android:id="@+id/et_register_password"
+                    style="@style/register_login_edittext_attribute"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="24dp"
+                android:background="#F0F0F0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+                <com.jsxl.selfexam.widget.DrawableTextView
+                    style="@style/register_login_text_attribute"
+                    android:drawableLeft="@drawable/icon_psw"
+                    android:text="确认密码："
+                    tc:drawableHeight="18dp"
+                    tc:drawableWidth="18dp" />
+
+                <EditText
+                    android:id="@+id/et_register_repassword"
+                    style="@style/register_login_edittext_attribute"
+                    android:hint="请再次输入密码"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="24dp"
+                android:background="#F0F0F0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+                <com.jsxl.selfexam.widget.DrawableTextView
+                    style="@style/register_login_text_attribute"
+                    android:drawableLeft="@drawable/icon_verification"
+                    android:text="验  证  码："
+                    tc:drawableHeight="18dp"
+                    tc:drawableWidth="18dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/et_register_code"
+                        style="@style/register_login_edittext_attribute"
+                        android:layout_centerVertical="true"
+                        android:layout_width="150dp"
+                        android:hint="请输入短信验证码"
+                        android:inputType="phone" />
+
+                    <TextView
+                        android:id="@+id/tv_register_send_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/get_register_bg"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="6dp"
+                        android:text="发送验证码"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="24dp"
+                android:background="#F0F0F0" />
+
+            <RadioGroup
+                android:id="@+id/rg_register"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="考试类型："
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_register1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/icon_judge_state"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:text="专升本"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/rb_register2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/icon_judge_state"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:text="高起本"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/rb_register3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/icon_judge_state"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:text="高起专"
+                    android:textColor="#000000" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="66dp"
+                android:background="@drawable/login_register_bg"
+                android:gravity="center"
+                android:text="注册"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="#ffffff"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

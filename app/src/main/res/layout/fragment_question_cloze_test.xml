@@ -1,0 +1,205 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jsxl.selfexam.fragment.QuestionClozeTestFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/tv_question_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <Button
+                android:id="@+id/btn_question_more"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="@color/colorStatus"
+                android:textSize="18sp"
+                android:background="#F3F3F3"
+                android:layout_centerInParent="true"
+                android:text="点击查看全部资料" />
+        </RelativeLayout>
+        <RadioGroup
+            android:id="@+id/rg_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="18dp">
+
+            <RadioButton
+                android:id="@+id/rb_answer0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="12dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_judge_state"
+                android:drawablePadding="12dp"
+                android:padding="4dp"
+                android:textColor="#333333"
+                android:textSize="14dp" />
+
+            <RadioButton
+                android:id="@+id/rb_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="12dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_judge_state"
+                android:drawablePadding="12dp"
+                android:padding="4dp"
+                android:textColor="#333333"
+                android:textSize="14dp" />
+
+            <RadioButton
+                android:id="@+id/rb_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="12dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_judge_state"
+                android:drawablePadding="12dp"
+                android:padding="4dp"
+                android:textColor="#333333"
+                android:textSize="14dp" />
+
+            <RadioButton
+                android:id="@+id/rb_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="12dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/icon_judge_state"
+                android:drawablePadding="12dp"
+                android:padding="4dp"
+                android:textColor="#333333"
+                android:textSize="14dp" />
+            
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp">
+            <!-- next_or_last_uncheck_bg -->
+            <Button
+                android:id="@+id/btn_next_question"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/get_register_bg"
+                android:gravity="center"
+                android:text="下一题"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_last_question"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="18dp"
+                android:layout_toLeftOf="@id/btn_next_question"
+                android:background="@drawable/get_register_bg"
+                android:gravity="center"
+                android:text="上一题"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/question_analysis_bg"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="【试题难度】"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/rb_difficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:isIndicator="true"
+                    android:maxHeight="24dp"
+                    android:minHeight="24dp"
+                    android:progressDrawable="@drawable/layer_live_rating_bar"
+                    android:rating="3"
+                    android:stepSize="0.5" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16sp"
+                android:text="【参考答案】A"
+                android:textColor="@color/colorStatus"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_solution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16sp"
+                android:text="【题目解析】A"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_location_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16sp"
+                android:text="【考点定位】A"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_knowledge_extend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="16sp"
+                android:text="【知识扩展】从前有座山，山上有座庙"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

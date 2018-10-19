@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_note_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
+    tools:context="com.jsxl.selfexam.activity.NoteDetailActivity">
+
+    <include layout="@layout/title_bar"
+        android:id="@+id/title1"/>
+
+    <RelativeLayout
+        android:layout_below="@id/title1"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:id="@+id/tv_note_chapter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:text="章节练习-语文"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/tv_note_question_number"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_note_question_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingRight="16sp"
+            android:text="共24题"
+            android:textColor="@color/colorStatus"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/note_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:divider="#f5f5f5"
+        android:dividerHeight="12dp"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:background="#FFFFFF">
+
+        <com.jsxl.selfexam.widget.CircularProgress
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

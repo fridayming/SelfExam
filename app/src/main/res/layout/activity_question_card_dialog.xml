@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_question_card_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="108dp"
+    android:background="@drawable/question_card_bg"
+    android:orientation="vertical"
+    tools:context="com.jsxl.selfexam.activity.QuestionCardDialogActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.jsxl.selfexam.widget.DrawableTextView
+            android:id="@+id/tv_question_card_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:drawableLeft="@drawable/icon_question_card_right"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/colorStatus"
+            android:textSize="12sp"
+            tc:drawableHeight="12dp"
+            tc:drawableWidth="12dp" />
+
+        <com.jsxl.selfexam.widget.DrawableTextView
+            android:id="@+id/tv_question_card_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/tv_question_card_right"
+            android:drawableLeft="@drawable/icon_question_card_wrong"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="#f84444"
+            android:textSize="12sp"
+            tc:drawableHeight="12dp"
+            tc:drawableWidth="12dp" />
+
+        <com.jsxl.selfexam.widget.DrawableTextView
+            android:id="@+id/tv_question_card_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/tv_question_card_wrong"
+            android:drawableLeft="@drawable/icon_question_card_total"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:text="5/200"
+            android:textColor="#333333"
+            android:textSize="12sp"
+            tc:drawableHeight="12dp"
+            tc:drawableWidth="12dp" />
+
+        <ImageView
+            android:id="@+id/iv_question_card_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/icon_question_card_back" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_question_card_check"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#f6f6f6"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:text="多选"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <com.jsxl.selfexam.widget.MyGridView
+                android:id="@+id/gv_question_card_check"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:numColumns="6"
+                android:verticalSpacing="12dp"></com.jsxl.selfexam.widget.MyGridView>
+            <TextView
+                android:id="@+id/tv_question_card_radio"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#f6f6f6"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:text="单选"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <com.jsxl.selfexam.widget.MyGridView
+                android:id="@+id/gv_question_card_radio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:numColumns="6"
+                android:verticalSpacing="12dp"></com.jsxl.selfexam.widget.MyGridView>
+
+
+
+            <TextView
+                android:id="@+id/tv_question_card_clozetest"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#f6f6f6"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:text="完形填空"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <com.jsxl.selfexam.widget.MyGridView
+                android:id="@+id/gv_question_card_clozetest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:numColumns="6"
+                android:verticalSpacing="12dp"></com.jsxl.selfexam.widget.MyGridView>
+            <TextView
+                android:id="@+id/tv_question_card_comprehension_select"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#f6f6f6"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:text="阅读理解"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <com.jsxl.selfexam.widget.MyGridView
+                android:id="@+id/gv_question_card_comprehension_select"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:numColumns="6"
+                android:verticalSpacing="12dp"></com.jsxl.selfexam.widget.MyGridView>
+            <TextView
+                android:id="@+id/tv_question_card_comprehension"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#f6f6f6"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:text="阅读理解"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <com.jsxl.selfexam.widget.MyGridView
+                android:id="@+id/gv_question_card_comprehension"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:numColumns="6"
+                android:verticalSpacing="12dp"></com.jsxl.selfexam.widget.MyGridView>
+
+            <TextView
+                android:id="@+id/tv_question_card_answer"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#f6f6f6"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:text="简答"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <com.jsxl.selfexam.widget.MyGridView
+                android:id="@+id/gv_question_card_answer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:numColumns="6"
+                android:verticalSpacing="12dp"></com.jsxl.selfexam.widget.MyGridView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

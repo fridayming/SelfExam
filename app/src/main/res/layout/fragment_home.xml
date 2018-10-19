@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jsxl.selfexam.fragment.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f0f0f0"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/banner1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/home_progress_bg">
+
+                <RelativeLayout
+                    android:id="@+id/home_rl_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="28dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/home_progress_bg_1">
+
+                    <com.jsxl.selfexam.widget.CircleProgressView
+                        android:id="@+id/cp_progress"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        tc:circleColor="#ffffff"
+                        tc:radius="18dip"
+                        tc:ringBgColor="#357dcf"
+                        tc:ringColor="#4397f7"
+                        tc:strokeWidth="4dip" />
+
+                    <ImageView
+                        android:id="@+id/home_iv_book"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="22dp"
+                        android:src="@drawable/icon_book" />
+
+                    <View
+                        android:id="@+id/home_line"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_toLeftOf="@+id/home_iv_book"
+                        android:background="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/home_tv_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toLeftOf="@id/home_line"
+                        android:layout_toRightOf="@id/cp_progress"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/home_tv_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/home_tv_progress"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toLeftOf="@id/home_line"
+                        android:layout_toRightOf="@id/cp_progress"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_rl_bg"
+                    android:layout_marginBottom="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/home_iv_collection"
+                            style="@style/home_icon_attribute"
+                            android:src="@drawable/icon_collection" />
+
+                        <TextView
+                            android:id="@+id/home_tv_collection"
+                            style="@style/home_text_attribute"
+                            android:layout_below="@id/home_iv_collection"
+                            android:text="收藏" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/home_iv_error"
+                            style="@style/home_icon_attribute"
+                            android:src="@drawable/icon_error" />
+
+                        <TextView
+                            android:id="@+id/home_tv_error"
+                            style="@style/home_text_attribute"
+                            android:layout_below="@id/home_iv_error"
+                            android:text="错题" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/home_iv_note"
+                            style="@style/home_icon_attribute"
+                            android:src="@drawable/icon_note" />
+
+                        <TextView
+                            android:id="@+id/home_tv_note"
+                            style="@style/home_text_attribute"
+                            android:layout_below="@id/home_iv_note"
+                            android:text="笔记" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/home_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#ffffff"
+                tc:tabIndicatorColor="#6397f7"
+                tc:tabSelectedTextColor="#6397f7"
+                tc:tabTextAppearance="@style/CustomTableTextAppearance"
+                tc:tabTextColor="#000000"></android.support.design.widget.TabLayout>
+
+            <com.jsxl.selfexam.widget.ViewPagerForScrollView
+                android:id="@+id/home_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.jsxl.selfexam.widget.ViewPagerForScrollView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

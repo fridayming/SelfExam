@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chapter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.jsxl.selfexam.activity.ChapterActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/title_bar" />
+
+        <com.jsxl.selfexam.widget.DrawableTextView
+            android:id="@+id/tv_chapter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginLeft="12dp"
+            android:drawableLeft="@drawable/icon_diamonds"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:text="史地（高起本）"
+            android:textColor="@color/colorStatus"
+            android:textSize="16sp"
+            tc:drawableHeight="16dp"
+            tc:drawableWidth="16dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#F8F8F8" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#FFFFFF" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_chapter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#00ffffff"
+                android:dividerHeight="0dp" />
+
+            <View
+                android:id="@+id/chapter_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="23dp"
+                android:background="#dedede"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+        <com.jsxl.selfexam.widget.CircularProgress
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

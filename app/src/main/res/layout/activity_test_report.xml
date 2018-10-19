@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test_report"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
+    tools:context="com.jsxl.selfexam.activity.TestReportActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_report_bg"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/bg_score0"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true">
+
+        <com.jsxl.selfexam.widget.DrawableTextView
+            android:id="@+id/tv_report_question"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/icon_question"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:text="题目10"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            tc:drawableHeight="15dp"
+            tc:drawableWidth="14dp" />
+
+        <com.jsxl.selfexam.widget.DrawableTextView
+            android:id="@+id/tv_report_time"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/icon_clock"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:text="用时20:25"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            tc:drawableHeight="15dp"
+            tc:drawableWidth="14dp" />
+
+
+
+        <TextView
+            android:id="@+id/tv_report_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginRight="6dp"
+            android:text="此次测评成绩合格"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_report_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/report_notice_bg"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="1dp"
+            android:text="注：主观题及未做题不参与评分结果统计"
+            android:textSize="14sp" />
+<!--
+        <TextView
+            android:id="@+id/tv_report_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:layout_marginTop="84dp"
+            android:textColor="#ffffff"
+            android:textSize="68sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_report_percent"
+            android:layout_toRightOf="@id/tv_report_percent"
+            android:text="%"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+-->
+        <com.jsxl.selfexam.widget.ScoreView
+            android:id="@+id/sv_report_number"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:background="@drawable/bg_score_circle"
+            android:layout_below="@+id/tv_report_time"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@id/rl_report_bg"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/rl_report_error"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="44dp">
+            <ImageView
+                android:id="@+id/iv_report_error"
+                android:layout_width="21dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_report_error"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"/>
+            <TextView
+                android:id="@+id/tv_report_error"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:gravity="center_vertical"
+                android:text="查看错题"
+                android:layout_toRightOf="@id/iv_report_error"
+                android:layout_marginLeft="12dp"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+            <TextView
+                android:id="@+id/tv_report_statistics"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:textColor="#666666"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:layout_below="@id/tv_report_error"
+                android:layout_toRightOf="@id/iv_report_error"
+                android:layout_marginLeft="12dp"
+                android:text="做对0题，做错0题"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_report_redo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="44dp">
+            <ImageView
+                android:id="@+id/iv_report_redo"
+                android:layout_width="21dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_report_reexam"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"/>
+            <TextView
+                android:id="@+id/tv_report_redo"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:gravity="center_vertical"
+                android:text="重新考试"
+                android:layout_toRightOf="@id/iv_report_redo"
+                android:layout_marginLeft="12dp"
+                android:textSize="16sp"
+                android:textColor="#333333"/>
+            <TextView
+                android:id="@+id/tv_report_explore"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:textColor="#666666"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:layout_below="@id/tv_report_redo"
+                android:layout_toRightOf="@id/iv_report_redo"
+                android:layout_marginLeft="12dp"
+                android:text="成绩不满意？再战"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

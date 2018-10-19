@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.jsxl.selfexam.fragment.TestListFragment">
+
+    <com.jsxl.selfexam.widget.MyListView
+        android:id="@+id/home_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#F1F5F7"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none">
+
+    </com.jsxl.selfexam.widget.MyListView>
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="#FFFFFF">
+        <com.jsxl.selfexam.widget.CircularProgress
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
+    </RelativeLayout>
+</RelativeLayout>

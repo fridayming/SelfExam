@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/icon_system_message" />
+
+        <TextView
+            android:id="@+id/tv_system_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:gravity="center|left"
+            android:text="2018-06-15 14:35"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_system_content"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:layout_marginLeft="42dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="卡洛斯大山里的马萨大玛莎拉蒂玛莎拉蒂马萨拉蒂三， 大妈是老大没谁了大甩卖了大妈蓝色大门萨勒曼大塑料袋马萨拉蒂撒大马拉松的马萨拉蒂"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:background="#eeeeee"/>
+
+</LinearLayout>

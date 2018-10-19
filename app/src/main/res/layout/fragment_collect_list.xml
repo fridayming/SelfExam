@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.jsxl.selfexam.fragment.CollectListFragment">
+
+    <ListView
+        android:id="@+id/collect_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#ffffff"
+        android:dividerHeight="0.5dp"
+        android:listSelector="#ffffff"
+        android:scrollbars="none">
+
+    </ListView>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_note_empty" />
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#333333"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iv_empty"
+            android:text="暂无收藏"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <com.jsxl.selfexam.widget.CircularProgress
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>
